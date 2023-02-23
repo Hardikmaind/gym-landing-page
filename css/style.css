@@ -1,0 +1,186 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    /* this (url) is written to include the image in the background as default */
+    /* this is how we include the img located in a different folder. considering both the css and img is in the same folder */
+    background: url(../img/bck2.jpg);
+    /* backgroung-size is used to fit an img in the website perfectly without any resolution probelm */
+    background-size: cover;
+  }
+
+  /* this left and right nad mid postion can be obtained using the float and flexbox. flexbox is the modern technique to do it. */
+
+  .left {
+    display: inline-block;
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 38px;
+    top: 21px;
+  }
+  /* left class mein ka img element */
+  .left img {
+    width: 102px;
+    /* this is the invert funtion of the css ..it will make the black img white and white img black  */
+    filter: invert(100%);
+  }
+  /* left class mein ka div element */
+  .left div {
+    /* it sets the height of the line */
+    line-height: 0px;
+    /* it sets the font size */
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .mid {
+    /* if margin auto ki madat se apan centre karna chahte toh uski teen condition rehti..i.e first display:block; second set the width third do the margin:auto */
+    display: block;
+    /* left:500px; */
+    /* here 33pc means 33pc of it parent element . here parent is header */
+    width: 52%;
+    /* if i put ther maring in the top as 0 px then it will show at the top..directly below the browser top. and also the left and right will conincide with it since their positon is absolute */
+    margin: 20px auto;
+    /* border: 2px solid rgb(89, 255, 0); */
+  }
+
+  .right {
+    display: inline-block;
+    position: absolute;
+    right: 41px;
+    top: 32px;
+    /* border: 2px solid rgb(29, 13, 255); */
+  }
+
+  .navbar {
+    display: inline-block;
+  }
+
+  .navbar li {
+    /* because of this all the li will be in inline */
+    display: inline-block;
+    font-size: 25px;
+  }
+
+  /* navbar class ka "li" element mein ka "a" element */
+  .navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 34px 23px;
+  }
+
+  /* "a" pe agar hover kare (or) a ki class active ho toh text color will be red and underline will be there */
+  .navbar li a:hover,
+  .navbar li a.active {
+    /* this is to give shadow when hovered over the menus or the opened menu */
+    /* box-shadow: 1px 1px 1px brown ; */
+
+    /* this is to give underline and color when hovered over the menus or the opened menu */
+    color: red;
+    text-decoration: underline;
+  }
+  .btn {
+    /* here the font is not inherited by the .btn from the body */
+    font-family: "Roboto Mono", monospace;
+    margin: 0px 9px;
+    /* since the default color is black we have to specify the color of the text */
+    color: white;
+    /* border: 2px solid rgb(255, 255, 255); */
+    background-color: black;
+    margin: 0px 9px;
+    padding: 4px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: yellow;
+    color: black;
+  }
+  .container {
+    padding: 75px;
+    border-radius: 28px;
+    width: 35%;
+    margin: 32 80px;
+    /* border: 2px solid white; */
+  }
+  /* this below means that form grp class k inputs only */
+  .form-group input {
+    text-align: center;
+    /* since input is inline element we made it into block */
+    display: block;
+    width: 500px;
+    margin: 11px auto;
+    padding: 1px;
+    /* border: 2px solid black; */
+    border-radius: 8px;
+    font-size: 25px;
+    font-family: "Roboto Mono", monospace;
+  }
+  .container h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    animation: text-flicker 2s linear infinite;
+  }
+  @keyframes text-flicker {
+    0% {
+      opacity:0.1;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+    }
+    
+    2% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+    }
+    8% {
+      opacity:0.1;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+    }
+    9% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1);
+    }
+    12% {
+      opacity:0.1;
+      text-shadow: 0px 0px rgba(242, 22, 22, 1);
+    }
+    20% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+    }
+    25% {
+      opacity:0.3;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+    }
+    30% {
+      opacity:1;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+    }
+    
+    70% {
+      opacity:0.7;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+    }
+    
+    72% {
+      opacity:0.2;
+      text-shadow:0px 0px 29px rgba(242, 22, 22, 1)
+    }
+    
+    77% {
+      opacity:.9;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+    }
+    100% {
+      opacity:.9;
+      text-shadow: 0px 0px 29px rgba(242, 22, 22, 1)
+    }
+  }
+  
+  .container button {
+    display: block;
+    width: 500px;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 25px;
+  }

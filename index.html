@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hardik's GYM</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/style.css" />
+ 
+     <!-- this is font api  we can include it here (or ) we can also include it outside head and outside style. between head and style -->
+
+     <!-- @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');  -->
+
+     <!-- will write here the css reset. that is it will change the default css style set by the browsers * -->
+
+
+
+  <body>
+    <header class="header">
+      <!-- left box for logo -->
+      <div class="left">
+        <img src="img/logo.png" alt="gym logo" />
+        <!-- used div for writing instead of <p> . the thing about a div being a container is that it can contain anything,a pragraph, a header ,a different heading tags, images and so much more -->
+
+        <!--The only difference between the two elements is semantics. Both elements, by default, have the CSS rule display: block (hence block-level) applied to them; nothing more (except somewhat extra margin in some instances). However, as aforementioned, they both different greatly in terms of semantics.
+
+The <p> element, as its name somewhat implies, is for paragraphs. Thus, <p> should be used when you want to create blocks of paragraph text.
+
+The <div> element, however, has little to no meaning semantically and therefore can be used as a generic block-level element — most commonly, people use it within layouts because it is meaningless semantically and can be used for generally anything you might require a block-level element for.  -->
+
+        <div>hardik fitness</div>
+      </div>
+      <!-- mid box for navbar -->
+      <div class="mid">
+        <ul class="navbar">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">fitness calculator</a></li>
+          <li><a href="#">contact us</a></li>
+        </ul>
+      </div>
+      <!-- right box for buttons -->
+      <div class="right">
+        <button class="btn">call us now</button>
+        <button class="btn">email us</button>
+      </div>
+    </header>
+
+    <!-- to create the landing page for the user we create the conatiner after the header -->
+
+    <div class="container">
+      <h1>JOIN THE BEST GYM OF PUNE NOW</h1>
+      <form action="noaction.php">
+        <!-- here since input in an inline tag we can declare a class in it and declare input element as block level since it is inline (or we can create a new div like below) -->
+        <div class="form-group">
+          <input type="text" name="" placeholder="enter your Name" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="enter your age" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="enter your Address" />
+        </div>
+        <div class="form-group">
+          <input type="text" name="" placeholder="enter your Ph number" />
+        </div>
+        <button class="btn">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
